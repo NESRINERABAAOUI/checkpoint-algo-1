@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exécution du Code JavaScript</title>
+</head>
+<body>
+    <script>
+        let phrase = "allah akbar.";
+
+        let nbCaracteres = 0;
+        let nbMots = 1;
+        let nbVoyelles = 0;
+
+        for (let i = 0; i < phrase.length; i++) {
+            let caractere = phrase[i];
+            nbCaracteres += 1;
+            if ("aeiouyAEIOUY".includes(caractere)) {
+                nbVoyelles += 1;
+            }
+            if (caractere === " ") {
+                nbMots += 1;
+            }
+        }
+
+        nbCaracteres -= 1;
+
+        console.log("Longueur de la phrase (sans le point) :", nbCaracteres);
+        console.log("Nombre de mots dans la phrase :", nbMots);
+        console.log("Nombre de voyelles dans la phrase :", nbVoyelles);
+    </script>
+</body>
+</html>
